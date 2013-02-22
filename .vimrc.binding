@@ -1,0 +1,52 @@
+"nmap 9 $
+"nmap 0 ^
+"nmap 1 0
+nmap <C-j> <PageDown>
+nmap <C-k> <PageUp>
+inoremap , ,<Space>
+"かっこを自動で閉じる
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+vnoremap { "zdi{<C-R>z}<ESC>
+vnoremap [ "zdi[<C-R>z]<ESC>
+vnoremap ( "zdi(<C-R>z)<ESC>
+vnoremap " "zdi"<C-R>z"<ESC>
+vnoremap ' "zdi'<C-R>z'<ESC>
+"セミコロンでもええんやで
+nnoremap ; :
+"インサートモードで左右移動
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+"ノーマルモードで改行
+noremap <CR> o<Esc>
+"ファイラー"
+nnoremap <silent><Space>e :Explore<CR>
+nnoremap <silent><Space>s :Sex<CR>
+"ESC mapping"
+inoremap jj <ESC>
+inoremap kk <Esc>
+"Escの2回押しでハイライト消去
+nmap <ESC><ESC> :noh <CR><ESC>
+"バッファ操作
+nnoremap <silent><C-b><C-j> :bf<CR>
+nnoremap <silent><C-b><C-k> :bp<CR>
+nnoremap <silent><C-b><C-d> :bd<CR>
+"矩形選択で自由に移動する
+set virtualedit+=block
+"補完"
+inoremap <C-j> <C-n>
+inoremap <C-k> <C-p>
+"vimrc リロードとか編集
+command! Rv source $MYVIMRC
+command! Ev edit $MYVIMRC
+"バッファ一覧
+noremap <silent><C-u><C-b> :Unite buffer<CR>
+"vimtwit"
+nnoremap <Space>tt :<C-u>PosttoTwitter<CR>
+nnoremap <Space>tf :<C-u>FriendsTwitter<CR>
+nnoremap <Space>tr :<C-u>RefreshTwitter<CR>
+nnoremap <Space>tp :<C-u>PreviousTwitter<CR>
+nnoremap <Space>tn :<C-u>NextTwitter<CR>

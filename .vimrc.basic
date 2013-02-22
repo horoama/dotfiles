@@ -1,0 +1,27 @@
+"基本設定
+set number
+set wrapscan
+set helplang=ja,en
+set shiftwidth=4
+set smarttab
+set smartindent
+set scrolloff=5 "スクロール時の余白確保"
+set virtualedit+=block "矩形選択を文字の無い場所も指定できるようにする"
+set nobackup "バックアップをとらない
+set showmode "現在のモードを表示
+set nocompatible
+set noswapfile "スワップファイル作らん"
+
+set wildmenu "コマンド補完強化"
+set wildchar=<tab> "コマンド補完を開始キー"
+
+"OSのクリップボードを使用する
+set clipboard+=unnamed
+"ヤンクした文字をシステムのクリップボードに
+set clipboard=unnamed
+"検索でハイライト入れて最後まで検索したら最初に戻るように"
+set incsearch
+set hlsearch
+set wrapscan
+"ファイルタイプ判定をOn
+filetype plugin on
