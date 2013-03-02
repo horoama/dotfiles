@@ -25,6 +25,8 @@ noremap <CR> o<Esc>
 "ファイラー"
 nnoremap <silent><Space>e :Explore<CR>
 nnoremap <silent><Space>s :Sex<CR>
+"Diff"
+command! DiffO :DiffOrig
 "ESC mapping"
 inoremap jj <ESC>
 inoremap kk <Esc>
