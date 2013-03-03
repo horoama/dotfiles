@@ -27,6 +27,8 @@ nnoremap <silent><Space>e :Explore<CR>
 nnoremap <silent><Space>s :Sex<CR>
 "Diff"
 command! DiffO :DiffOrig
+"VimShell"
+command! VS :VimShell
 "ESC mapping"
 inoremap jj <ESC>
 inoremap kk <Esc>
