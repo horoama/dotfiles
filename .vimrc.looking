@@ -22,3 +22,10 @@ autocmd WinEnter * match WhitespaceEOL /\s\+$/
 highlight ZenkakuSpace cterm=underline ctermbg=gray guibg=#666666
 au BufWinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
 au WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+
+"入力モード時、ステータスラインのカラーを変更
+augroup InsertHook
+autocmd!
+autocmd InsertEnter * highlight StatusLine guifg=#ccdc90 guibg=#2E4340 ctermfg=white ctermbg=darkblue
+autocmd InsertLeave * highlight StatusLine guifg=#2E4340 guibg=#ccdc90 ctermfg=black ctermbg=white
+augroup END
