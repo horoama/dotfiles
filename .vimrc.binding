@@ -48,6 +48,11 @@ command! Rv source $MYVIMRC
 command! Ev edit $MYVIMRC
 "バッファ一覧
 noremap <silent><C-u><C-b> :Unite buffer<CR>
+"文字コード変換
+command! Eucjp e ++enc=euc-jp
+command! Utf8 e ++enc=utf-8
+command! Sjis e ++enc=shif_jis
+
 "vimtwit"
 nnoremap <Space>tt :<C-u>PosttoTwitter<CR>
 nnoremap <Space>tf :<C-u>FriendsTwitter<CR>
