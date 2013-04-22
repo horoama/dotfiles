@@ -1,0 +1,21 @@
+[user]
+    name = horoama
+    email = horoama@example.com #example
+[color]
+    ui = auto
+    diff = auto
+    branch = auto
+[core]
+    editor = vim
+    pager  = less
+[merge]
+    tool=vimdiff
+[alias]
+    gr = log --graph
+    ls = ls-files
+    st = status
+    co = checkout
+    br= branch
+    diffh = diff HEAD
+    diffh1 = diff HEAD~
+    diffh2 = diff HEAD~2
