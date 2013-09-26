@@ -23,6 +23,23 @@ setopt list_packed             # 補完候補をできるだけ詰めて表示�
 setopt list_types              # 補完候補にファイルの種類も表示する
 bindkey "^[[Z" reverse-menu-complete  # Shift-Tabで補完候補を逆順する("\e[Z"でも動作する)
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # 補完時に大文字小文字を区別しない
+#バージョン管理システムのロード
+autoload -Uz vcs_info
+
+# 表示フォーマットの指定
+# %b ブランチ情報
+# %a アクション名(mergeなど)
+zstyle ':vcs_info:*' formats '[%b]'
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () {
+    psvar=()
+    LANG=en_US.UTF-8 vcs_info
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+
+# バージョン管理されているディレクトリにいれば表示，そうでなければ非表示
+RPROMPT="%1(v|%F{green}%1v%f|)"
+
 
 #prompt
 #PROMPT="%B%{${fg[red]}%}%/#%{${reset_color}%}%b "
@@ -41,6 +58,7 @@ PROMPT="[%n@%F{yellow}%m%F{reset}]%F{cyan}%~ %F{reset}#"
 #}
 #zle -N zle-line-init
 #zle -N zle-keymap-select
+export PATH=¨/usr/bin:$PATH¨
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
@@ -49,3 +67,7 @@ export PERL_MB_OPT="--install_base /home/horoama/perl5";
 export PERL_MM_OPT="INSTALL_BASE=/home/horoama/perl5";
 export PERL5LIB="/home/horoama/perl5/lib/perl5/x86_64-linux-thread-multi:/home/horoama/perl5/lib/perl5";
 export PATH="/home/horoama/perl5/bin:$PATH";
+
+alias emacs="vim"
+alias sl="ls"
+alias cim="vim"
