@@ -20,3 +20,4 @@
     diffh1 = diff HEAD~
     diffh2 = diff HEAD~2
     diffs = diff --staged
+    fuck = fsck
