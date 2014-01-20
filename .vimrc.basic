@@ -9,6 +9,9 @@ set helplang=ja,en
 set shiftwidth=4
 set smarttab
 set smartindent
+set autoindent
+set expandtab
+set tabstop=4
 set scrolloff=5 "スクロール時の余白確保"
 set virtualedit+=block "矩形選択を文字の無い場所も指定できるようにする"
 set nobackup "バックアップをとらない
