@@ -43,7 +43,7 @@ RPROMPT="%1(v|%F{green}%1v%f|)"
 
 #prompt
 #PROMPT="%B%{${fg[red]}%}%/#%{${reset_color}%}%b "
-PROMPT="[%n@%F{yellow}%m%F{reset}]%F{cyan}%~ %F{reset}#"
+PROMPT="[%n@%F{yellow}%m%F{reset}]%F{cyan}%(5~, %-2~/.../%2~, %~) %F{reset}#"
 ##zshプロンプトにモード表示
 #function zle-line-init zle-keymap-select {
 #    case $KEYMAP in
