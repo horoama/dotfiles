@@ -4,4 +4,5 @@ augroup SkeletonAu
     autocmd BufNewFile *.pl 0r $HOME/.vim/templates/skel.pl
     autocmd BufNewFile *.html 0r $HOME/.vim/templates/skel.html
     autocmd BufNewFile *.php 0r $HOME/.vim/templates/skel.php
+    autocmd BufNewFile *.tex 0r $HOME/.vim/templates/skel.tex
 augroup END
