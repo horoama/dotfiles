@@ -58,15 +58,17 @@ PROMPT="[%n@%F{yellow}%m%F{reset}]%F{cyan}%(5~, %-2~/.../%2~, %~) %F{reset}#"
 #}
 #zle -N zle-line-init
 #zle -N zle-keymap-select
-export PATH=¨/usr/bin:$PATH¨
+export PATH="/usr/bin:$PATH"
+export PATH="/usr/local/heroku:$PATH"
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/bin/stack-0.1.5.0-x86_64-linux:$PATH"
+export PATH="$HOME/.stack/programs/x86_64-linux/ghc-7.10.2/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
 eval "$(rbenv init -)"
 
-export PERL_LOCAL_LIB_ROOT="/home/horoama/perl5";
-export PERL_MB_OPT="--install_base /home/horoama/perl5";
-export PERL_MM_OPT="INSTALL_BASE=/home/horoama/perl5";
-export PERL5LIB="/home/horoama/perl5/lib/perl5/x86_64-linux-thread-multi:/home/horoama/perl5/lib/perl5";
-export PATH="/home/horoama/perl5/bin:$PATH";
 
 alias emacs="vim"
 alias sl="ls"

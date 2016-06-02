@@ -3,33 +3,17 @@ filetype off
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 "plugins"
-"Bundle 'uguu-org/vim-matrix-screensaver.git'
 Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/unite.vim.git'
 Bundle 'Shougo/vimproc'
-Bundle 'Shougo/vimshell.git'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-fugitive.git'
 Bundle 'Shougo/neocomplcache'
-Bundle 'vim-scripts/TwitVim.git'
-"Bundle 'h1mesuke/vim-alignta'
-""Bundle 'jcf/vim-latex'
-Bundle 'sudo.vim'
-Bundle 'quickrun.vim'
-Bundle 'surround.vim'
+Bundle 'ujihisa/neco-ghc'
+Bundle 'eagletmt/ghcmod-vim'
+Bundle 'Shougo/vinarise'
 filetype plugin indent on
-let twitvim_force_ssl = 1
 let g:neocomplcache_enable_at_startup = 1 "neocomplcacheを起動時に有効化"
 let g:neocomplcache_min_syntax_length = 4 "シンタックスをキャッシュする最小文字長"
-"let g:indent_guides_enable_on_vim_startup=1
-let twitvim_count = 60
-"latex"
-let g:quickrun_config ={'tex' : {'command' : 'tex2pdf'}}
-""let g:quickrun_config ={'Markdown' : {'command' : '~/bin/Markdown.pl'}}
-"vim-latex"
-""set grepprg=grep\ -nH\ $*
-""let g:tex_flavor='latex'
-""let g:Tex_CompileRule_dvi='platex $* && dvipdfmx $*.dvi'
-""let g:Tex_CompileRule_pdf='dvipdfmx $*.dvi'
-""let g:Tex_ViewRule_pdf='acroread'
-""git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+let $PATH = $PATH . ':' . expand("~/.cabal/bin")
