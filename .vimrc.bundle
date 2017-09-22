@@ -1,19 +1,22 @@
-"vundle"
-filetype off
-set rtp+=~/.vim/vundle.git/
-call vundle#rc()
-"plugins"
-Bundle 'Shougo/vimfiler'
-Bundle 'Shougo/unite.vim.git'
-Bundle 'Shougo/vimproc'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'Shougo/neocomplcache'
-Bundle 'ujihisa/neco-ghc'
-Bundle 'eagletmt/ghcmod-vim'
-Bundle 'Shougo/vinarise'
-filetype plugin indent on
-let g:neocomplcache_enable_at_startup = 1 "neocomplcacheを起動時に有効化"
-let g:neocomplcache_min_syntax_length = 4 "シンタックスをキャッシュする最小文字長"
-let g:haskellmode_completion_ghc = 0
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-let $PATH = $PATH . ':' . expand("~/.cabal/bin")
+if &compatible
+  set nocompatible
+endif
+set runtimepath+=~/.vim/dein.vim
+
+call dein#begin(expand('~/.vim/dein'))
+
+call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/vimfiler.vim')
+call dein#add('Shougo/vimshell.vim')
+call dein#add('Shougo/vinarise.vim')
+call dein#add('tpope/vim-fugitive.git')
+call dein#add('vim-scripts/TwitVim.git')
+call dein#end()
+
+
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_underbar_completion = 1
+let g:neocomplete#min_syntax_length = 3

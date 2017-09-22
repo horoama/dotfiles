@@ -1,8 +1,7 @@
-""git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-"""vundle.vimで管理しているpluginを読み込む"
-source ~/dotfiles/.vimrc.bundle
 """基本設定"
 source ~/dotfiles/.vimrc.basic
+"""プラグイン"
+source ~/dotfiles/.vimrc.bundle
 """キーバインド"
 source ~/dotfiles/.vimrc.binding
 """見た目の設定"

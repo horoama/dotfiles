@@ -24,6 +24,7 @@ inoremap <C-l> <Right>
 noremap <CR> o<Esc>
 "ファイラー"
 nnoremap <silent><Space>e :Explore<CR>
+nnoremap <silent><Space>f :VimFiler -split -simple -winwidth=35 -no-quit <CR>
 nnoremap <silent><Space>s :Sex<CR>
 "Diff"
 command! DiffO :DiffOrig
