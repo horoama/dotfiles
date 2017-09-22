@@ -1,34 +1,22 @@
-"vundle"
-filetype off
-set rtp+=~/.vim/vundle.git/
-call vundle#rc()
-"plugins"
-"Bundle 'uguu-org/vim-matrix-screensaver.git'
-Bundle 'Shougo/vimfiler'
-Bundle 'Shougo/unite.vim.git'
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/vimshell.git'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'Shougo/neocomplcache'
-Bundle 'vim-scripts/TwitVim.git'
-"Bundle 'h1mesuke/vim-alignta'
-""Bundle 'jcf/vim-latex'
-Bundle 'sudo.vim'
-Bundle 'quickrun.vim'
-Bundle 'surround.vim'
-filetype plugin indent on
-let g:neocomplcache_enable_at_startup = 1 "neocomplcacheを起動時に有効化"
-let g:neocomplcache_min_syntax_length = 4 "シンタックスをキャッシュする最小文字長"
-"let g:indent_guides_enable_on_vim_startup=1
-let twitvim_count = 60
-"latex"
-let g:quickrun_config ={'tex' : {'command' : 'tex2pdf'}}
-""let g:quickrun_config ={'Markdown' : {'command' : '~/bin/Markdown.pl'}}
-"vim-latex"
-""set grepprg=grep\ -nH\ $*
-""let g:tex_flavor='latex'
-""let g:Tex_CompileRule_dvi='platex $* && dvipdfmx $*.dvi'
-""let g:Tex_CompileRule_pdf='dvipdfmx $*.dvi'
-""let g:Tex_ViewRule_pdf='acroread'
-""git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+if &compatible
+  set nocompatible
+endif
+set runtimepath+=~/.vim/dein.vim
+
+call dein#begin(expand('~/.vim/dein'))
+
+call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/vimfiler.vim')
+call dein#add('Shougo/vimshell.vim')
+call dein#add('Shougo/vinarise.vim')
+call dein#add('tpope/vim-fugitive.git')
+call dein#add('vim-scripts/TwitVim.git')
+call dein#end()
+
+
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_underbar_completion = 1
+let g:neocomplete#min_syntax_length = 3
