@@ -66,6 +66,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/bin/stack-0.1.5.0-x86_64-linux:$PATH"
 export PATH="$HOME/.stack/programs/x86_64-linux/ghc-7.10.2/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/scala/bin:$PATH"
 
 eval "$(rbenv init -)"
 
