@@ -70,6 +70,8 @@ export PATH="/usr/local/scala/bin:$PATH"
 
 eval "$(rbenv init -)"
 
+export SAVEHIST=100000
+setopt share_history
 
 alias emacs="vim"
 alias sl="ls"
