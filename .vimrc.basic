@@ -18,6 +18,7 @@ set nobackup "バックアップをとらない
 set showmode "現在のモードを表示
 set nocompatible
 set noswapfile "スワップファイル作らん"
+set synmaxcol=200
 
 set wildmenu "コマンド補完強化"
 set wildchar=<tab> "コマンド補完を開始キー"
